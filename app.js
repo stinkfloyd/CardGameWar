@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   function playGame() {
+    if (cardCount === 25) {
+      button.innerText = `Deal New Decks`
+    }
     if (cardCount < 26) {
       let cardOne = playerOne.pop()
       let cardTwo = playerTwo.pop()
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       cardCount++
     } else {
+      button.innerText = `GO TO WAR!`
       message.innerText = `New Decks dealt!`
       deckCount++
       decksPlayed.innerText = deckCount
