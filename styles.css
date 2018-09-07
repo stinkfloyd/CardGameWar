@@ -1,5 +1,6 @@
 body {
   display: inline;
+  background-color: green;
 }
 
 #playerOne, #playerTwo {
