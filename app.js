@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => {
             button.addEventListener("click", playGame)
           }, 1000)
-          console.log("new decks");
       })
     }
   }
@@ -72,21 +71,21 @@ document.addEventListener("DOMContentLoaded", () => {
       case "JACK": return 11
       default: return parseInt(card, 10)
     }
-
   }
 
   function dealCards(deckId) {
-    splitDeck(deckId, playerOne)
-    splitDeck(deckId, playerTwo)
-    console.log("Deck Split\n", playerOne, playerTwo);
+    splitDeck(deckId, playerOne, false)
   }
 
-  function splitDeck(deckId, player) {
+  function splitDeck(deckId, player, checked) {
     axios.get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=26`).then((response) => {
         let { data } = response
         let { cards } = data
         for (let i = 0; i < 26; i++)
           player.push(cards[i]);
+          if (!checked) {
+            splitDeck(deckId, playerTwo, true)
+          }
     })
   }
 })

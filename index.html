@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nicholas Tzavaras WAR</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicholas Tzavaras WAR</title>
 
-    <!--[if lt IE 9]>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
+  <div class="container-fluid">
     <div class="row" id="cardRow">
       <div class="col-sm-6" id="playerOne">
         <label for="firstCard">Player 1</label>
@@ -27,7 +30,7 @@
         </div>
       </div>
       <div class="col-sm-6" id="playerTwo">
-        <label for="SecondCard">Player 2</label>
+        <label for="secondCard">Player 2</label>
         <div><img src="http://placekitten.com/226/314" name="secondCard" id="secondCard"></div>
         <div class="row">
           <label for="gamesTwo">Games won:
@@ -53,11 +56,12 @@
         </label>
       </div>
     </div>
+  </div>
 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="app.js" charset="utf-8"></script>
-  </body>
 </html>

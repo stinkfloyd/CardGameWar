@@ -1,6 +1,7 @@
 body {
   display: inline;
   background-color: green;
+  font-family: "Comic Sans MS";
 }
 
 #playerOne, #playerTwo {
